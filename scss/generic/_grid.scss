@@ -1,0 +1,44 @@
+.container {
+    width: 100%;
+    max-width: 1352px;
+    margin: 0 auto;
+    padding: 0 15px;
+
+    &.container-full {
+        max-width: 100%;
+    }
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+$columns: 12;
+$column-base-width: calc(100% / $columns);
+
+[class*='col-'] {
+    min-height: 1px;
+    width: $column-base-width;
+    box-sizing: border-box;
+}
+
+@for $i from 1 through $columns {
+    .col-#{$i} {
+        width: calc($column-base-width * $i);
+    }
+}
+
+@media (max-width: 1083px) {
+    [class*='col-'] {
+        width: 100%;
+    }
+}
+
+@media (max-width: 1352px) {
+    .container {
+        width: 100%;
+        margin: 0 auto;
+        padding: 0 15px;
+    }
+}

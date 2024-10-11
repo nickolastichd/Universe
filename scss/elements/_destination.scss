@@ -1,0 +1,515 @@
+@import "../settings/variables";
+
+body {
+    background-image: url(../../scss/assets/destination/background-destination-desktop.jpg);
+    height: 1000px;
+    background-size: cover;
+    color: white;
+    background-position: center;
+
+    @media (max-width: 1083px) {
+        background-image: url(../../scss/assets/destination/background-destination-mobile.jpg);
+        height: 100vh;
+        background-position: center;
+        background-size: cover;
+    }
+
+    @media (max-width: 511px) {
+        background-image: url(../../scss/assets/destination/background-destination-mobile.jpg);
+        height: 1200px;
+        background-size: cover;
+        background-position: center;
+    }
+}
+
+.header {
+    display: flex;
+    padding-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    img {
+        display: flex;
+        margin-left: 120px;
+        width: 70px;
+        position: relative;
+
+        @media (max-width: 1083px) {
+            margin-left: 50px;
+        }
+
+        @media (max-width: 511px) {
+            width: 30px;
+        }
+    }
+
+    ul {
+        z-index: 1;
+        position: relative;
+        display: flex;
+        backdrop-filter: blur(90);
+        height: 146px;
+        width: 970px;
+        align-items: center;
+
+        li {
+            position: relative;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 40px;
+
+            strong {
+                color: white;
+                font-family: $barlow;
+                font-weight: 600;
+                font-size: 22px;
+                margin: 0 5px;
+            }
+
+            a {
+                color: white;
+                margin: 0 5px;
+                text-decoration: none;
+                font-size: 20px;
+                font-family: $barlow;
+                font-weight: 300;
+                text-transform: uppercase;
+                letter-spacing: 3px;
+            }
+
+            &:first-child {
+                margin-left: 120px;
+                position: relative;
+
+                @media (max-width: 1083px) {
+                    margin-left: 5%;
+                }
+            }
+
+            &:nth-child(2):before {
+                content: "";
+                position: absolute;
+                transition: 300ms;
+                width: 100%;
+                height: 4px;
+                background-color: white;
+                bottom: -62px;
+                opacity: 1;
+            }
+
+            &:before {
+                content: "";
+                position: absolute;
+                transition: 300ms;
+                width: 0;
+                height: 4px;
+                background-color: white;
+                opacity: 0;
+                bottom: -62px;
+            }
+
+            &:hover:before {
+                content: "";
+                position: absolute;
+                opacity: 1;
+                width: 100%;
+                height: 4px;
+                background-color: white;
+            }
+
+            @media (max-width: 1083px) {
+                width: 80%;
+            }
+
+            @media (max-width: 885px) {
+                display: none;
+            }
+        }
+
+        @media (max-width: 885) {
+            backdrop-filter: none;
+        }
+    }
+
+    .line {
+        z-index: 2;
+        width: 36%;
+        height: 1px;
+        opacity: 0.4;
+        background-color: white;
+        transform: translate(100px);
+
+        @media (max-width: 1083px) {
+            display: none;
+        }
+    }
+
+    @media (max-width: 1083px) {
+        padding: 0;
+    }
+
+    .hamburger {
+        width: 8%;
+        filter: invert(1);
+        display: none;
+        cursor: pointer;
+
+        @media (max-width: 885px) {
+            display: flex;
+            padding-right: 50px;
+        }
+    }
+}
+
+.hamburger-menu {
+    display: none;
+    width: 100%;
+    background-color: white;
+    height: 100vh;
+    transition: 300ms;
+    justify-content: center;
+
+    ul {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: relative;
+        align-items: center;
+
+        li {
+            width: fit-content;
+            position: relative;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 20px 0;
+
+            strong {
+                color: black;
+                font-family: $barlow;
+                font-weight: 600;
+                font-size: 22px;
+                margin: 0 5px;
+            }
+
+            a {
+                color: black;
+                margin: 0 5px;
+                text-decoration: none;
+                font-size: 20px;
+                font-family: $barlow;
+                font-weight: 600;
+                text-transform: uppercase;
+                letter-spacing: 3px;
+            }
+
+            &:before {
+                content: "";
+                position: absolute;
+                transition: 300ms;
+                width: 0;
+                height: 4px;
+                background-color: black;
+                opacity: 0;
+                bottom: -10px;
+            }
+
+            &:hover:before {
+                content: "";
+                position: absolute;
+                opacity: 1;
+                width: 100%;
+                height: 4px;
+                background-color: black;
+            }
+        }
+    }
+
+    .hamburger {
+        position: absolute;
+        width: 50px;
+        right: 50;
+        top: 50;
+        cursor: pointer;
+    }
+}
+
+.hamburgerDropin {
+    transition: 300ms;
+    display: flex;
+    animation-name: animationHamburger;
+    animation-duration: 0.3s;
+}
+
+.hamburgerDropout {
+    transition: 300ms;
+    animation-name: animationHamburgerDropout;
+    animation-duration: 0.3s;
+    transition: 300ms;
+    display: none;
+}
+
+.hero {
+    display: flex;
+    margin-top: 140px;
+
+    .hero-container {
+        .left {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            .planet {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                .mars-img,
+                .europa-img,
+                .titan-img,
+                .moon-img {
+                    animation-name: planetAnim;
+                    animation-duration: 1s;
+
+                    @media (max-width: 1083px) {
+                        padding-bottom: 55px;
+                    }
+                }
+
+                .mars-img,
+                .europa-img,
+                .titan-img {
+                    display: none;
+                }
+
+                @media (max-width: 1083px) {
+                    width: 50%;
+                }
+            }
+            h3 {
+                display: flex;
+                transform: translate(0, -70px);
+                font-size: 35px;
+                letter-spacing: 5px;
+                text-transform: uppercase;
+                font-family: $barlow;
+                font-weight: 300;
+
+                strong {
+                    padding-right: 20px;
+                    font-weight: 500;
+                    color: gray;
+                }
+
+                @media (max-width: 511px) {
+                    font-size: 24px;
+                    text-align: center;
+                }
+            }
+
+            img {
+                width: 70%;
+                margin-top: 80px;
+            }
+
+            @media (max-width: 1083px) {
+                display: flex;
+                align-items: center;
+            }
+        }
+
+        .right {
+            .mars,
+            .titan,
+            .europa {
+                display: none;
+            }
+
+            .line-2 {
+                width: 80%;
+                margin: 35px 0;
+                height: 1px;
+                background-color: white;
+            }
+
+            ul {
+                display: flex;
+
+                li {
+                    margin: 0 30px;
+                    position: relative;
+                    font-size: 18px;
+                    cursor: pointer;
+
+                    &:before {
+                        content: "";
+                        position: absolute;
+                        transition: 300ms;
+                        width: 0;
+                        height: 4px;
+                        background-color: white;
+                        opacity: 0;
+                        bottom: -10px;
+                    }
+
+                    &:hover:before {
+                        content: "";
+                        position: absolute;
+                        opacity: 1;
+                        width: 100%;
+                        height: 4px;
+                        background-color: white;
+                    }
+                }
+
+                @media (max-width: 511px) {
+                    width: 70%;
+                    display: flex;
+                    justify-content: center;
+                }
+            }
+
+            .moon,
+            .mars,
+            .europa,
+            .titan {
+                animation-name: planetTextAnim;
+                animation-duration: 500ms;
+                flex-direction: column;
+                h2 {
+                    font-size: 113px;
+                    font-family: $bellefair;
+                    font-weight: 100;
+                    letter-spacing: 6px;
+                    text-transform: uppercase;
+                    margin-top: 80px;
+
+                    @media (max-width: 511px) {
+                        font-size: 80px;
+                    }
+                }
+
+                p {
+                    font-size: 18px;
+                    font-weight: 100;
+                    font-family: $barlow;
+                    letter-spacing: 2px;
+                    line-height: 25px;
+                    margin-top: 25px;
+                    margin-right: 150px;
+
+                    @media (max-width: 511px) {
+                        font-size: 16px;
+                    }
+                }
+
+                .distance-travel {
+                    width: 70%;
+                    display: flex;
+                    justify-content: space-between;
+                    margin-bottom: 50px;
+
+                    h4 {
+                        font-size: 18px;
+                        font-family: $barlow;
+                        text-transform: uppercase;
+                        letter-spacing: 3px;
+                        font-weight: 300;
+                        opacity: 0.6;
+                    }
+
+                    p {
+                        font-size: 24px;
+                        width: 100%;
+                    }
+                }
+
+                @media (max-width: 511px) {
+                    width: 100%;
+                }
+            }
+
+            @media (max-width: 1083px) {
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+            }
+
+            @media (max-width: 511px) {
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 1083px) {
+            display: flex;
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+        }
+
+        @media (max-width: 511px) {
+            width: 100%;
+        }
+    }
+
+    @media (max-width: 1083px) {
+        display: flex;
+        align-items: center;
+    }
+
+    @media (max-width: 511px) {
+        width: 100%;
+    }
+}
+
+@keyframes animationHamburger {
+    from {
+        transform: translateX(-500px);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes animationHamburgerDropout {
+    from {
+        transform: translateX(0);
+        display: flex;
+        opacity: 1;
+    }
+
+    to {
+        transform: translate(0, 300px);
+        display: none;
+        opacity: 0;
+    }
+}
+
+@keyframes planetAnim {
+    from {
+        opacity: 0;
+        transform: scale(0.7);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes planetTextAnim {
+    from {
+        opacity: 0;
+        transform: translate(0, -50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate(0);
+    }
+}

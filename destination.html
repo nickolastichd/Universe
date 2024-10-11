@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="./scss/main.scss" />
+        <link rel="stylesheet" href="./scss/elements/_destination.scss" />
+        <title>Destination</title>
+    </head>
+    <body>
+        <!-- Header -->
+        <section class="header" id="headerDiv">
+            <img src="./scss/assets/shared/logo.svg" alt="" />
+            <div class="line"></div>
+            <ul>
+                <li><strong>00</strong><a href="home.html">Home</a></li>
+                <li>
+                    <strong>01</strong
+                    ><a href="destination.html">Destination</a>
+                </li>
+                <li><strong>02</strong><a href="crew.html">Crew</a></li>
+                <li>
+                    <strong>03</strong><a href="technology.html">Technology</a>
+                </li>
+            </ul>
+            <img
+                class="hamburger"
+                src="./scss/assets/shared/menu_3810986.png"
+                alt=""
+                id="hamburgerBtn"
+            />
+        </section>
+
+        <!-- Hamburger Menu -->
+        <div class="hamburger-menu" id="hamburgerMenu">
+            <ul>
+                <li><strong>00</strong><a href="home.html">Home</a></li>
+                <li>
+                    <strong>01</strong
+                    ><a href="destination.html">Destination</a>
+                </li>
+                <li><strong>02</strong><a href="crew.html">Crew</a></li>
+                <li>
+                    <strong>03</strong><a href="technology.html">Technology</a>
+                </li>
+            </ul>
+            <img
+                class="hamburger"
+                src="./scss/assets/shared/menu_3810986.png"
+                alt=""
+                id="hamburgerBtnDropout"
+            />
+        </div>
+
+        <!-- Hero -->
+        <section class="hero" id="heroDiv">
+            <div class="row hero-container container">
+                <div class="col-6">
+                    <div class="left">
+                        <h3><strong>01</strong>Pick your destination</h3>
+
+                        <div class="planet">
+                            <img
+                                class="moon-img"
+                                id="moonImg"
+                                src="./scss/assets/destination/image-moon.png"
+                                alt=""
+                            />
+                            <img
+                                class="mars-img"
+                                id="marsImg"
+                                src="./scss/assets/destination/image-mars.png"
+                                alt=""
+                            />
+                            <img
+                                class="europa-img"
+                                id="europaImg"
+                                src="./scss/assets/destination/image-europa.png"
+                                alt=""
+                            />
+                            <img
+                                class="titan-img"
+                                id="titanImg"
+                                src="./scss/assets/destination/image-titan.png"
+                                alt=""
+                            />
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="right">
+                        <ul>
+                            <li id="moonBtn">Moon</li>
+                            <li id="marsBtn">Mars</li>
+                            <li id="europaBtn">Europa</li>
+                            <li id="titanBtn">Titan</li>
+                        </ul>
+
+                        <div class="moon" id="moonDiv">
+                            <h2>Moon</h2>
+                            <p>
+                                See our planet as you’ve never seen it before. A
+                                perfect relaxing trip away to help regain
+                                perspective and come back refreshed. While
+                                you’re there, take in some history by visiting
+                                the Luna 2 and Apollo 11 landing sites.
+                            </p>
+                            <div class="line-2"></div>
+                            <div class="distance-travel">
+                                <div class="distance">
+                                    <h4>Avg. distance</h4>
+                                    <p>384,400 km</p>
+                                </div>
+                                <div class="travel">
+                                    <h4>Est. travel time</h4>
+                                    <p>3 DAYS</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mars" id="marsDiv">
+                            <h2>Mars</h2>
+                            <p>
+                                Don’t forget to pack your hiking boots. You’ll
+                                need them to tackle Olympus Mons, the tallest
+                                planetary mountain in our solar system. It’s two
+                                and a half times the size of Everest!
+                            </p>
+                            <div class="line-2"></div>
+                            <div class="distance-travel">
+                                <div class="distance">
+                                    <h4>Avg. distance</h4>
+                                    <p>225 MIL. km</p>
+                                </div>
+                                <div class="travel">
+                                    <h4>Est. travel time</h4>
+                                    <p>9 MONTHS</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="europa" id="europaDiv">
+                            <h2>Europa</h2>
+                            <p>
+                                The smallest of the four Galilean moons orbiting
+                                Jupiter, Europa is a winter lover’s dream. With
+                                an icy surface, it’s perfect for a bit of ice
+                                skating, curling, hockey, or simple relaxation
+                                in your snug wintery cabin.
+                            </p>
+                            <div class="line-2"></div>
+                            <div class="distance-travel">
+                                <div class="distance">
+                                    <h4>Avg. distance</h4>
+                                    <p>628 MIL. km</p>
+                                </div>
+                                <div class="travel">
+                                    <h4>Est. travel time</h4>
+                                    <p>3 YEARS</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="titan" id="titanDiv">
+                            <h2>TITAN</h2>
+                            <p>
+                                The only moon known to have a dense atmosphere
+                                other than Earth, Titan is a home away from home
+                                (just a few hundred degrees colder!). As a
+                                bonus, you get striking views of the Rings of
+                                Saturn.
+                            </p>
+                            <div class="line-2"></div>
+                            <div class="distance-travel">
+                                <div class="distance">
+                                    <h4>Avg. distance</h4>
+                                    <p>1.6 BIL. km</p>
+                                </div>
+                                <div class="travel">
+                                    <h4>Est. travel time</h4>
+                                    <p>7 YEARS</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <script src="app.js"></script>
+    </body>
+</html>
