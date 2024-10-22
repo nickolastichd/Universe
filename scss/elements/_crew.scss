@@ -1,0 +1,476 @@
+@import "../settings/variables";
+
+body {
+    background-image: url(../../scss/assets/crew/background-crew-desktop.jpg);
+    background-size: cover;
+    height: 100vh;
+    color: white;
+    background-position: center;
+
+    @media (max-width: 1083px) {
+        background-image: url(../../scss/assets/crew/background-crew-tablet.jpg);
+        height: 100%;
+        background-position: center;
+        background-size: cover;
+    }
+
+    @media (max-width: 511px) {
+        background-image: url(../../scss/assets/crew/background-crew-mobile.jpg);
+        height: 100%;
+        background-size: cover;
+        background-position: center;
+    }
+}
+
+.header {
+    display: flex;
+    padding-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    img {
+        display: flex;
+        margin-left: 120px;
+        width: 70px;
+        position: relative;
+
+        @media (max-width: 1083px) {
+            margin-left: 50px;
+        }
+
+        @media (max-width: 511px) {
+            width: 30px;
+        }
+    }
+
+    ul {
+        z-index: 1;
+        position: relative;
+        display: flex;
+        backdrop-filter: blur(90);
+        height: 146px;
+        width: 970px;
+        align-items: center;
+
+        li {
+            position: relative;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 40px;
+
+            strong {
+                color: white;
+                font-family: $barlow;
+                font-weight: 600;
+                font-size: 22px;
+                margin: 0 5px;
+            }
+
+            a {
+                color: white;
+                margin: 0 5px;
+                text-decoration: none;
+                font-size: 20px;
+                font-family: $barlow;
+                font-weight: 300;
+                text-transform: uppercase;
+                letter-spacing: 3px;
+            }
+
+            &:first-child {
+                margin-left: 120px;
+                position: relative;
+
+                @media (max-width: 1083px) {
+                    margin-left: 5%;
+                }
+            }
+
+            &:nth-child(3):before {
+                content: "";
+                position: absolute;
+                transition: 300ms;
+                width: 100%;
+                height: 4px;
+                background-color: white;
+                bottom: -62px;
+                opacity: 1;
+            }
+
+            &:before {
+                content: "";
+                position: absolute;
+                transition: 300ms;
+                width: 0;
+                height: 4px;
+                background-color: white;
+                opacity: 0;
+                bottom: -62px;
+            }
+
+            &:hover:before {
+                content: "";
+                position: absolute;
+                opacity: 1;
+                width: 100%;
+                height: 4px;
+                background-color: white;
+            }
+
+            @media (max-width: 1083px) {
+                width: 80%;
+            }
+
+            @media (max-width: 885px) {
+                display: none;
+            }
+        }
+
+        @media (max-width: 885) {
+            backdrop-filter: none;
+        }
+    }
+
+    .line {
+        z-index: 2;
+        width: 36%;
+        height: 1px;
+        opacity: 0.4;
+        background-color: white;
+        transform: translate(100px);
+
+        @media (max-width: 1083px) {
+            display: none;
+        }
+    }
+
+    @media (max-width: 1083px) {
+        padding: 0;
+    }
+
+    .hamburger {
+        width: 8%;
+        filter: invert(1);
+        display: none;
+        cursor: pointer;
+
+        @media (max-width: 885px) {
+            display: flex;
+            padding-right: 50px;
+        }
+    }
+}
+
+.hamburger-menu {
+    display: none;
+    width: 100%;
+    background-color: white;
+    height: 100vh;
+    transition: 300ms;
+    justify-content: center;
+
+    ul {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: relative;
+        align-items: center;
+
+        li {
+            width: fit-content;
+            position: relative;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 20px 0;
+
+            strong {
+                color: black;
+                font-family: $barlow;
+                font-weight: 600;
+                font-size: 22px;
+                margin: 0 5px;
+            }
+
+            a {
+                color: black;
+                margin: 0 5px;
+                text-decoration: none;
+                font-size: 20px;
+                font-family: $barlow;
+                font-weight: 600;
+                text-transform: uppercase;
+                letter-spacing: 3px;
+            }
+
+            &:before {
+                content: "";
+                position: absolute;
+                transition: 300ms;
+                width: 0;
+                height: 4px;
+                background-color: black;
+                opacity: 0;
+                bottom: -10px;
+            }
+
+            &:hover:before {
+                content: "";
+                position: absolute;
+                opacity: 1;
+                width: 100%;
+                height: 4px;
+                background-color: black;
+            }
+        }
+    }
+
+    .hamburger {
+        position: absolute;
+        width: 50px;
+        right: 50;
+        top: 50;
+        cursor: pointer;
+    }
+}
+
+.hamburgerDropin {
+    transition: 300ms;
+    display: flex;
+    animation-name: animationHamburger;
+    animation-duration: 0.3s;
+}
+
+.hamburgerDropout {
+    transition: 300ms;
+    animation-name: animationHamburgerDropout;
+    animation-duration: 0.3s;
+    transition: 300ms;
+    display: none;
+}
+
+.hero {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    display: flex;
+    margin: 0;
+    margin-top: 65px;
+
+    .hero-container {
+        .left {
+            height: fit-content;
+
+            .mission-specialist,
+            .pilot,
+            .flight-engineer {
+                display: none;
+            }
+
+            h2 {
+                font-size: 36px;
+                font-family: $barlow;
+                text-transform: uppercase;
+                letter-spacing: 3px;
+
+                strong {
+                    margin-right: 20px;
+                    font-weight: 600;
+                    opacity: 0.6;
+                }
+
+                @media (max-width: 1369px) {
+                    margin-left: 25px;
+                }
+
+                @media (max-width: 557px) {
+                    font-size: 24px;
+                }
+            }
+
+            .commander,
+            .mission-specialist,
+            .pilot,
+            .flight-engineer {
+                flex-direction: column;
+
+                h4 {
+                    font-size: 30px;
+                    font-family: $bellefair;
+                    text-transform: uppercase;
+                    letter-spacing: 2px;
+                    opacity: 0.6;
+                    font-weight: 600;
+                    margin-top: 100px;
+
+                    @media (max-width: 1369px) {
+                        margin-left: 25px;
+                    }
+
+                    @media (max-width: 557px) {
+                        font-size: 20px;
+                    }
+                }
+
+                h3 {
+                    font-size: 60px;
+                    font-family: $bellefair;
+                    font-weight: 500;
+                    text-transform: uppercase;
+                    letter-spacing: 3px;
+                    margin-top: 30px;
+
+                    @media (max-width: 557px) {
+                        font-size: 34px;
+                        letter-spacing: 0;
+                    }
+
+                    @media (max-width: 1369px) {
+                        margin-left: 25px;
+                    }
+                }
+
+                p {
+                    font-size: 20px;
+                    margin-right: 150px;
+                    line-height: 30px;
+                    margin-top: 50px;
+                    font-family: $barlow;
+                    font-weight: 300;
+
+                    @media (max-width: 1369px) {
+                        margin-left: 25px;
+                    }
+
+                    @media (max-width: 557px) {
+                        font-size: 16px;
+                        margin-right: 0;
+                        width: 80%;
+                    }
+                }
+            }
+
+            ul {
+                display: flex;
+                flex-direction: row;
+                margin-top: 50px;
+
+                li {
+                    transition: 300ms;
+                    opacity: 0.5;
+                    cursor: pointer;
+                    height: 20px;
+                    border-radius: 50%;
+                    width: 20px;
+                    background-color: white;
+                    margin: 0 40px;
+
+                    &:hover {
+                        opacity: 1;
+                    }
+
+                    @media (max-width: 557px) {
+                        width: 15px;
+                        height: 15px;
+                        margin: 0 20px;
+                    }
+                }
+            }
+        }
+
+        .right {
+            display: flex;
+            justify-content: center;
+            height: fit-content;
+
+            .second-img,
+            .third-img,
+            .fourth-img,
+            .first-img {
+                animation-name: peopleDropin;
+                animation-duration: 1s;
+            }
+
+            .second-img,
+            .third-img,
+            .fourth-img {
+                display: none;
+            }
+
+            .first-img {
+                width: 500px;
+
+                @media (max-width: 557px) {
+                    width: 100%;
+                }
+            }
+
+            .second-img {
+                width: 460px;
+
+                @media (max-width: 557px) {
+                    width: 100%;
+                }
+            }
+
+            .third-img {
+                @media (max-width: 557px) {
+                    width: 100%;
+                }
+            }
+
+            .fourth-img {
+                @media (max-width: 557px) {
+                    width: 100%;
+                }
+            }
+
+            img {
+                width: 100%;
+
+                @media (max-width: 557px) {
+                    width: 50%;
+                }
+            }
+        }
+    }
+}
+
+@keyframes animationHamburger {
+    from {
+        transform: translateX(-500px);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes animationHamburgerDropout {
+    from {
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+    to {
+        transform: translate(0, 300px);
+        opacity: 0;
+    }
+}
+
+@keyframes peopleDropin {
+    from {
+        transform: translate(0, -100px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="./scss/main.scss" />
+        <link rel="stylesheet" href="./scss/elements/_crew.scss" />
+        <title>Crew</title>
+    </head>
+    <body>
+        <!-- Header -->
+        <section class="header" id="headerDiv">
+            <img src="./scss/assets/shared/logo.svg" alt="" />
+            <div class="line"></div>
+            <ul>
+                <li><strong>00</strong><a href="home.html">Home</a></li>
+                <li>
+                    <strong>01</strong
+                    ><a href="destination.html">Destination</a>
+                </li>
+                <li><strong>02</strong><a href="crew.html">Crew</a></li>
+                <li>
+                    <strong>03</strong><a href="technology.html">Technology</a>
+                </li>
+            </ul>
+            <img
+                class="hamburger"
+                src="./scss/assets/shared/menu_3810986.png"
+                alt=""
+                id="hamburgerBtn"
+            />
+        </section>
+
+        <!-- Hamburger Menu -->
+        <div class="hamburger-menu" id="hamburgerMenu">
+            <ul>
+                <li><strong>00</strong><a href="home.html">Home</a></li>
+                <li>
+                    <strong>01</strong
+                    ><a href="destination.html">Destination</a>
+                </li>
+                <li><strong>02</strong><a href="crew.html">Crew</a></li>
+                <li>
+                    <strong>03</strong><a href="technology.html">Technology</a>
+                </li>
+            </ul>
+            <img
+                class="hamburger"
+                src="./scss/assets/shared/menu_3810986.png"
+                alt=""
+                id="hamburgerBtnDropout"
+            />
+        </div>
+
+        <!-- Hero -->
+        <section class="hero" id="heroDiv">
+            <div class="row hero-container container">
+                <div class="col-6">
+                    <div class="left">
+                        <h2><strong>01</strong>Pick your destination</h2>
+                        <div id="commanderDiv" class="commander">
+                            <h4>Commander</h4>
+                            <h3>Douglas Hurley</h3>
+                            <p>
+                                Douglas Gerald Hurley is an American engineer,
+                                former Marine Corps pilot and former NASA
+                                astronaut. He launched into space for the third
+                                time as commander of Crew Dragon Demo-2.
+                            </p>
+                        </div>
+                        <div id="missionDiv" class="mission-specialist">
+                            <h4>Mission Specialist</h4>
+                            <h3>Mark Shuttleworth</h3>
+                            <p>
+                                Mark Richard Shuttleworth is the founder and CEO
+                                of Canonical, the company behind the Linux-based
+                                Ubuntu operating system. Shuttleworth became the
+                                first South African to travel to space as a
+                                space tourist.
+                            </p>
+                        </div>
+                        <div id="pilotDiv" class="pilot">
+                            <h4>Pilot</h4>
+                            <h3>Victor Glover</h3>
+                            <p>
+                                Pilot on the first operational flight of the
+                                SpaceX Crew Dragon to the International Space
+                                Station. Glover is a commander in the U.S. Navy
+                                where he pilots an F/A-18.He was a crew member
+                                of Expedition 64, and served as a station
+                                systems flight engineer.
+                            </p>
+                        </div>
+                        <div id="engineerDiv" class="flight-engineer">
+                            <h4>Flight Engineer</h4>
+                            <h3>Anousheh Ansari</h3>
+                            <p>
+                                Anousheh Ansari is an Iranian American engineer
+                                and co-founder of Prodea Systems. Ansari was the
+                                fourth self-funded space tourist, the first
+                                self-funded woman to fly to the ISS, and the
+                                first Iranian in space.
+                            </p>
+                        </div>
+
+                        <ul>
+                            <li id="firstCircle"></li>
+                            <li id="secondCircle"></li>
+                            <li id="thirdCircle"></li>
+                            <li id="fourthCircle"></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="right">
+                        <img id="firstImg" class="first-img" src="./scss/assets/crew/image-douglas-hurley.png" alt="">
+                        <img id="secondImg" class="second-img" src="./scss/assets/crew/image-mark-shuttleworth.png" alt="">
+                        <img id="thirdImg" class="third-img" src="./scss/assets/crew/image-victor-glover.png" alt="">
+                        <img id="fourthImg" class="fourth-img" src="./scss/assets/crew/image-anousheh-ansari.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <script src="app.js"></script>
+        <script src="crew.js" defer></script>
+    </body>
+</html>
