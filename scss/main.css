@@ -2131,5 +2131,5 @@ table {
 body {
   box-sizing: border-box;
   scroll-behavior: smooth;
-  overflow: hidden;
+  overflow-y: scroll;
 }/*# sourceMappingURL=main.css.map */
