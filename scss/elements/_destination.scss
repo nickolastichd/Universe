@@ -1,28 +1,28 @@
 @import "../settings/variables";
 
-body {
-    background-image: url(../../scss/assets/destination/background-destination-desktop.jpg);
+.dest-body {
+    background-image: url(../scss/assets/destination/background-destination-desktop.jpg);
     background-size: cover;
     height: 100vh;
     color: white;
     background-position: center;
 
     @media (max-width: 1083px) {
-        background-image: url(../../scss/assets/destination/background-destination-mobile.jpg);
+        background-image: url(../scss/assets/destination/background-destination-mobile.jpg);
         height: 100vh;
         background-position: center;
         background-size: cover;
     }
 
     @media (max-width: 511px) {
-        background-image: url(../../scss/assets/destination/background-destination-mobile.jpg);
+        background-image: url(../scss/assets/destination/background-destination-mobile.jpg);
         height: 100%;
         background-size: cover;
         background-position: center;
     }
 }
 
-.header {
+.header-dest {
     display: flex;
     padding-top: 50px;
     display: flex;
@@ -45,6 +45,8 @@ body {
     }
 
     ul {
+        -webkit-backdrop-filter: blur(90px);
+        backdrop-filter: blur(90px);
         z-index: 1;
         position: relative;
         display: flex;
@@ -254,7 +256,7 @@ body {
     display: none;
 }
 
-.hero {
+.hero-dest {
     display: flex;
     justify-content: center;
     padding: 0;
@@ -262,10 +264,11 @@ body {
     margin: 0;
     margin-top: 140px;
 
-    .hero-container {
+    .hero-container-dest {
         padding: 0;
         margin: 0;
-        .left {
+
+        .left-dest {
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -328,7 +331,7 @@ body {
             }
         }
 
-        .right {
+        .right-dest {
             margin-left: 100px;
             .mars,
             .titan,

@@ -1,28 +1,28 @@
 @import "../settings/variables";
 
-body {
-    background-image: url(../../scss/assets/technology/background-technology-desktop.jpg);
+.techno-body {
+    background-image: url(../scss/assets/technology/background-technology-desktop.jpg);
     background-size: cover;
     height: 100vh;
     color: white;
     background-position: center;
 
     @media (max-width: 1083px) {
-        background-image: url(../../scss/assets/technology/background-technology-tablet.jpg);
+        background-image: url(../scss/assets/technology/background-technology-tablet.jpg);
         height: 100vh;
         background-position: center;
         background-size: cover;
     }
 
     @media (max-width: 511px) {
-        background-image: url(../../scss/assets/technology/background-technology-mobile.jpg);
+        background-image: url(../scss/assets/technology/background-technology-mobile.jpg);
         background-size: cover;
         height: 100%;
         background-position: center;
     }
 }
 
-.header {
+.header-techno {
     display: flex;
     padding-top: 50px;
     display: flex;
@@ -45,6 +45,8 @@ body {
     }
 
     ul {
+        -webkit-backdrop-filter: blur(90px);
+        backdrop-filter: blur(90px);
         z-index: 1;
         position: relative;
         display: flex;
@@ -254,7 +256,7 @@ body {
     display: none;
 }
 
-.hero {
+.hero-techno {
     display: flex;
     justify-content: center;
     padding: 0;
@@ -262,8 +264,9 @@ body {
     margin: 0;
     margin-top: 140px;
 
-    .hero-container {
-        .left {
+    .hero-container-techno {
+
+        .left-techno {
             h2 {
                 font-size: 36px;
                 font-family: $barlow;
@@ -425,7 +428,7 @@ body {
             }
         }
 
-        .right {
+        .right-techno {
             height: 100%;
             display: flex;
             align-items: center;

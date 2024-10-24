@@ -1,28 +1,26 @@
 @import "../settings/variables";
 
-body {
-    background-image: url(../../scss/assets/home/background-home-desktop.jpg);
+.home-body {
+    background-image: url(../scss/assets/home/background-home-desktop.jpg);
     height: 100vh;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
 
     @media (max-width: 1083px) {
-        background-image: url(../../scss/assets/home/background-home-tablet.jpg);
+        background-image: url(../scss/assets/home/background-home-tablet.jpg);
         height: 100%;
-        background-position: center;
         background-size: cover;
     }
 
     @media (max-width: 511px) {
-        background-image: url(../../scss/assets/home/background-home-mobile.jpg);
+        background-image: url(../scss/assets/home/background-home-mobile.jpg);
         height: 100vh;
         background-size: cover;
-        background-position: bottom;
     }
 }
 
-.header {
+.header-home {
     display: flex;
     padding-top: 50px;
     display: flex;
@@ -45,10 +43,11 @@ body {
     }
 
     ul {
+        -webkit-backdrop-filter: blur(90px);
+        backdrop-filter: blur(90px);
         z-index: 1;
         position: relative;
         display: flex;
-        backdrop-filter: blur(90);
         height: 146px;
         width: 970px;
         align-items: center;
@@ -164,18 +163,18 @@ body {
     }
 }
 
-.hero {
+.hero-home {
     display: flex;
     width: 100%;
     margin-top: 150px;
 
-    .hero-container {
+    .hero-container-home {
         display: flex;
         width: 100vw;
         height: 100%;
         align-items: center;
 
-        .left {
+        .left-home {
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -223,7 +222,7 @@ body {
             }
         }
 
-        .right {
+        .right-home {
             display: flex;
             justify-content: center;
             align-items: center;
@@ -262,10 +261,8 @@ body {
         z-index: -1;
         height: 250px;
         width: 250px;
-        border-radius: 100%;
+        border-radius: 50%;
         transition: 300ms;
-        bottom: 0;
-        right: 0;
 
         @media (max-width: 511px) {
             width: 150px;
@@ -276,29 +273,22 @@ body {
     &:hover:before {
         height: 350px;
         width: 350px;
-        bottom: -50;
-        right: -50px;
         background-color: rgba(227, 238, 227, 0.4);
 
         @media (max-width: 511px) {
             height: 200px;
             width: 200px;
-            bottom: -25;
-            right: -25px;
         }
     }
 
     &:active:before {
         height: 350px;
         width: 350px;
-        bottom: -50;
-        right: -50px;
         background-color: rgba(174, 182, 174, 0.8);
     }
 
     @media (max-width: 1083px) {
         margin-top: 50px;
-        margin-bottom: 50px;
     }
 
     @media (max-width: 511px) {
@@ -376,7 +366,6 @@ body {
     }
 
     .hamburger {
-
         position: absolute;
         width: 50px;
         right: 50;

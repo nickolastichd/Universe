@@ -1,28 +1,28 @@
 @import "../settings/variables";
 
-body {
-    background-image: url(../../scss/assets/crew/background-crew-desktop.jpg);
+.crew-body {
+    background-image: url(../scss/assets/crew/background-crew-desktop.jpg);
     background-size: cover;
     height: 100vh;
     color: white;
     background-position: center;
 
     @media (max-width: 1083px) {
-        background-image: url(../../scss/assets/crew/background-crew-tablet.jpg);
+        background-image: url(../scss/assets/crew/background-crew-tablet.jpg);
         height: 100%;
         background-position: center;
         background-size: cover;
     }
 
     @media (max-width: 511px) {
-        background-image: url(../../scss/assets/crew/background-crew-mobile.jpg);
+        background-image: url(../scss/assets/crew/background-crew-mobile.jpg);
         height: 100%;
         background-size: cover;
         background-position: center;
     }
 }
 
-.header {
+.header-crew {
     display: flex;
     padding-top: 50px;
     display: flex;
@@ -45,6 +45,8 @@ body {
     }
 
     ul {
+        -webkit-backdrop-filter: blur(90px);
+        backdrop-filter: blur(90px);
         z-index: 1;
         position: relative;
         display: flex;
@@ -254,7 +256,7 @@ body {
     display: none;
 }
 
-.hero {
+.hero-crew {
     display: flex;
     justify-content: center;
     padding: 0;
@@ -262,8 +264,9 @@ body {
     margin: 0;
     margin-top: 65px;
 
-    .hero-container {
-        .left {
+    .hero-container-crew {
+
+        .left-crew {
             height: fit-content;
 
             .mission-specialist,
@@ -383,7 +386,7 @@ body {
             }
         }
 
-        .right {
+        .right-crew {
             display: flex;
             justify-content: center;
             height: fit-content;
