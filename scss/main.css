@@ -1222,7 +1222,7 @@ table {
 @media (max-width: 511px) {
   .home-body {
     background-image: url(../scss/assets/home/background-home-mobile.jpg);
-    height: 100vh;
+    height: 100%;
     background-size: cover;
   }
 }
