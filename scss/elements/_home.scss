@@ -52,6 +52,10 @@
         width: 970px;
         align-items: center;
 
+        @media (max-width: 886px) {
+            backdrop-filter: none;
+        }
+
         li {
             position: relative;
             cursor: pointer;
@@ -368,8 +372,9 @@
     .hamburger {
         position: absolute;
         width: 50px;
-        right: 50;
-        top: 50;
+        margin-right: 50px;
+        right: 0;
+        top: 50px;
         cursor: pointer;
     }
 }

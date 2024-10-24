@@ -194,6 +194,12 @@ table {
   width: 970px;
   align-items: center;
 }
+@media (max-width: 886px) {
+  .header-crew ul {
+    -webkit-backdrop-filter: none;
+            backdrop-filter: none;
+  }
+}
 .header-crew ul li {
   position: relative;
   cursor: pointer;
@@ -367,8 +373,9 @@ table {
 .hamburger-menu .hamburger {
   position: absolute;
   width: 50px;
-  right: 50;
-  top: 50;
+  margin-right: 50px;
+  right: 0;
+  top: 50px;
   cursor: pointer;
 }
 
@@ -681,6 +688,12 @@ table {
   width: 970px;
   align-items: center;
 }
+@media (max-width: 886px) {
+  .header-dest ul {
+    -webkit-backdrop-filter: none;
+            backdrop-filter: none;
+  }
+}
 .header-dest ul li {
   position: relative;
   cursor: pointer;
@@ -854,8 +867,9 @@ table {
 .hamburger-menu .hamburger {
   position: absolute;
   width: 50px;
-  right: 50;
-  top: 50;
+  margin-right: 50px;
+  right: 0;
+  top: 50px;
   cursor: pointer;
 }
 
@@ -1246,6 +1260,12 @@ table {
   width: 970px;
   align-items: center;
 }
+@media (max-width: 886px) {
+  .header-home ul {
+    -webkit-backdrop-filter: none;
+            backdrop-filter: none;
+  }
+}
 .header-home ul li {
   position: relative;
   cursor: pointer;
@@ -1556,8 +1576,9 @@ table {
 .hamburger-menu .hamburger {
   position: absolute;
   width: 50px;
-  right: 50;
-  top: 50;
+  margin-right: 50px;
+  right: 0;
+  top: 50px;
   cursor: pointer;
 }
 
@@ -1654,6 +1675,12 @@ table {
   height: 146px;
   width: 970px;
   align-items: center;
+}
+@media (max-width: 886px) {
+  .header-techno ul {
+    -webkit-backdrop-filter: none;
+            backdrop-filter: none;
+  }
 }
 .header-techno ul li {
   position: relative;
@@ -1828,8 +1855,9 @@ table {
 .hamburger-menu .hamburger {
   position: absolute;
   width: 50px;
-  right: 50;
-  top: 50;
+  margin-right: 50px;
+  right: 0;
+  top: 50px;
   cursor: pointer;
 }
 
